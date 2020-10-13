@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: exampleSite/data
+  label: Homepage
+  create: all
+  match: "**/*"
 - type: heading
   label: Blog Post
 - type: directory
@@ -12,13 +17,6 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: '20191203072044'
-  templates:
-  - post
-- type: directory
-  path: exampleSite/content/french/blog
-  label: Post (fr)
-  create: documents
-  match: "**/*"
   templates:
   - post
 - type: heading
@@ -30,20 +28,8 @@ sections:
   match: "**/*"
   templates:
   - author
-- type: directory
-  path: exampleSite/content/french/author
-  label: Author (fr)
-  create: documents
-  match: "**/*"
-  templates:
-  - author
 - type: heading
   label: Data
-- type: directory
-  path: exampleSite/data
-  label: Homepage
-  create: all
-  match: "**/*"
 - type: directory
   path: exampleSite/i18n
   label: i18n
